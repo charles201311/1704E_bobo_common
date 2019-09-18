@@ -2,8 +2,8 @@
  * Copyright © 2019 公司名. All rights reserved.
  * 
  * @Title: PeronTest.java 
- * @Prject: bobo-common
- * @Package: com.bobo.common.utils 
+ * @Prject: zhangsan-common
+ * @Package: com.zhangsan.common.utils 
  * @Description: TODO
  * @author: charles   
  * @date: 2019年8月8日 下午3:47:34 
@@ -16,6 +16,10 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import org.junit.Test;
+
+import com.bobo.common.utils.DateUtil;
+import com.bobo.common.utils.RandomUtil;
+import com.bobo.common.utils.StringUtil;
 
 /** 
  * @ClassName: PeronTest 

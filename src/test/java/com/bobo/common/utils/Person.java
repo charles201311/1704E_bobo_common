@@ -2,8 +2,8 @@
  * Copyright © 2019 公司名. All rights reserved.
  * 
  * @Title: Person.java 
- * @Prject: bobo-common
- * @Package: com.bobo.common.utils 
+ * @Prject: zhangsan-common
+ * @Package: com.zhangsan.common.utils 
  * @Description: TODO
  * @author: charles   
  * @date: 2019年8月8日 下午3:46:16 

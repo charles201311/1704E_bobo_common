@@ -2,8 +2,8 @@
  * Copyright © 2019 公司名. All rights reserved.
  * 
  * @Title: StringUtil.java 
- * @Prject: bobo-common
- * @Package: com.bobo.common.utils 
+ * @Prject: zhangsan-common
+ * @Package: com.zhangsan.common.utils 
  * @Description: TODO
  * @author: charles   
  * @date: 2019年8月8日 上午11:09:12 
@@ -11,8 +11,17 @@
  */
 package com.bobo.common.utils;
 
+import java.io.IOException;
+import java.io.InputStream;
 import java.io.UnsupportedEncodingException;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Random;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * @ClassName: StringUtil
@@ -21,6 +30,124 @@ import java.util.Random;
  * @date: 2019年8月8日 上午11:09:12
  */
 public class StringUtil {
+	
+	
+	/**
+	 * 功能说明：实现判断传入的字符串是否为包含http的url地址
+	 * @throws IOException 
+	 * @throws MalformedURLException 
+	 */
+	public static boolean isHttpUrl(String src){
+		
+		try {
+			URL url = new URL(src);
+			url.openStream();//试着代开该url
+          return true;//如果能打开则是合法的URL
+		} catch (MalformedURLException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return false;
+		
+		
+		
+		
+	}
+	
+	/**
+	 * 
+	 * @Title: isNumber 
+	 * @Description: 判断是否为数值类型
+	 * @param src
+	 * @return
+	 * @return: boolean
+	 */
+	public static boolean isNumber(Object src) {
+		
+    	//String regex ="^[0-9]+$";
+		
+		return src  instanceof Number;
+		
+	}
+	
+	
+	
+	/*
+	* 方法功能：根据正则在字符串提取一段值，用于后面在url地址里提取ID值。
+	* 例如在“http://news.cnstock.com/news,yw-201908-4413224.htm”把“4413224”提取出来。
+	*/
+	public static String getPlaceholderValue(String src, String regex){
+		//编译规则
+		Pattern p = Pattern.compile(regex);
+		//匹配规则
+		Matcher m = p.matcher(src);
+		if(m.find()) {
+			//返回匹配的内容
+			return m.group();
+		}
+		return null;
+		
+	}
+
+	/**
+	 * 字符串转为日期
+	 * @Title: getFormatDate 
+	 * @Description: TODO
+	 * @param date
+	 * @param pattern
+	 * @return
+	 * @return: Date
+	 */
+	public  static Date  getFormatDate(String date,String pattern) {
+		SimpleDateFormat df = new SimpleDateFormat(pattern);
+		try {
+			 return df.parse(date);
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}
+		
+		return null;
+		
+		
+	}
+	
+	/**
+	 * 
+	 * @Title: getFormatDate 
+	 * @Description:返回格式化的日期
+	 * @param date
+	 * @param pattern yyyy-MM-dd HH:mm:ss  或yyyy-MM-dd
+	 * @return
+	 * @return: String
+	 */
+	public  static String getFormatDate(Date date,String pattern) {
+		SimpleDateFormat df = new SimpleDateFormat(pattern);
+	     return 	df.format(date);
+		
+	}
+	
+	
+	
+	/**
+	 * 
+	 * @Title: split 
+	 * @Description: 字符串切割
+	 * @param url  
+	 * @param chars 分割方式 |    ,   ; 
+	 * @return
+	 * @return: String[]
+	 */
+	public static String[] split(String url,String chars) {
+		
+		return url.split(chars);
+		
+	}
+	
+	
+	
+	
 	// 方法1：判断源字符串是否有值，空引号(空白字符串)也算没值 (5分)
 	public static boolean hasLength(String src) {
 		return null != src && src.length() > 0;

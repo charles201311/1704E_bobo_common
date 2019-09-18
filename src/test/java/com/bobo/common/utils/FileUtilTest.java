@@ -2,8 +2,8 @@
  * Copyright © 2019 公司名. All rights reserved.
  * 
  * @Title: FileUtilTest.java 
- * @Prject: bobo-common
- * @Package: com.bobo.common.utils 
+ * @Prject: zhangsan-common
+ * @Package: com.zhangsan.common.utils 
  * @Description: TODO
  * @author: charles   
  * @date: 2019年8月7日 下午4:51:54 
@@ -14,6 +14,8 @@ package com.bobo.common.utils;
 import static org.junit.Assert.*;
 
 import org.junit.Test;
+
+import com.bobo.common.utils.FileUtil;
 
 /** 
  * @ClassName: FileUtilTest 

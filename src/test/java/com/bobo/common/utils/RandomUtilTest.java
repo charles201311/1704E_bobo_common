@@ -2,8 +2,8 @@
  * Copyright © 2019 公司名. All rights reserved.
  * 
  * @Title: RandomUtilTest.java 
- * @Prject: bobo-common
- * @Package: com.bobo.common.utils 
+ * @Prject: zhangsan-common
+ * @Package: com.zhangsan.common.utils 
  * @Description: TODO
  * @author: charles   
  * @date: 2019年8月8日 上午10:34:56 
@@ -14,6 +14,8 @@ package com.bobo.common.utils;
 import static org.junit.Assert.*;
 
 import org.junit.Test;
+
+import com.bobo.common.utils.RandomUtil;
 
 /** 
  * @ClassName: RandomUtilTest 

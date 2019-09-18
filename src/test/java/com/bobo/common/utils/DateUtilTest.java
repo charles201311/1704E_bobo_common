@@ -2,8 +2,8 @@
  * Copyright © 2019 公司名. All rights reserved.
  * 
  * @Title: DateUtilTest.java 
- * @Prject: bobo-common
- * @Package: com.bobo.common.utils 
+ * @Prject: zhangsan-common
+ * @Package: com.zhangsan.common.utils 
  * @Description: TODO
  * @author: charles   
  * @date: 2019年8月7日 下午4:36:05 
@@ -18,6 +18,8 @@ import java.util.Calendar;
 import java.util.Date;
 
 import org.junit.Test;
+
+import com.bobo.common.utils.DateUtil;
 
 /** 
  * @ClassName: DateUtilTest 

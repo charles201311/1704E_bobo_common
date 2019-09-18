@@ -2,8 +2,8 @@
  * Copyright © 2019 公司名. All rights reserved.
  * 
  * @Title: StreamUtilTest.java 
- * @Prject: bobo-common
- * @Package: com.bobo.common.utils 
+ * @Prject: zhangsan-common
+ * @Package: com.zhangsan.common.utils 
  * @Description: TODO
  * @author: charles   
  * @date: 2019年8月8日 上午10:12:25 
@@ -19,6 +19,8 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 
 import org.junit.Test;
+
+import com.bobo.common.utils.StreamUtil;
 
 /** 
  * @ClassName: StreamUtilTest 
